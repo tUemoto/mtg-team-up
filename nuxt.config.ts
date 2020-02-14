@@ -1,7 +1,7 @@
 import colors from 'vuetify/es5/util/colors';
-import NuxtConfiguration from '@nuxt/config';
+import { Configuration } from '@nuxt/types';
 
-const config: NuxtConfiguration = {
+const config: Configuration = {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -39,6 +39,7 @@ const config: NuxtConfiguration = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
+    '@nuxt/typescript-build',
   ],
   /*
   ** Nuxt.js modules
@@ -85,6 +86,10 @@ const config: NuxtConfiguration = {
     */
     extend(config, ctx) {
     },
+  },
+  typescript: {
+    typeCheck: true,
+    ignoreNotFoundWarnings: true,
   },
 };
 
