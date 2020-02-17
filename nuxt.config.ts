@@ -1,5 +1,5 @@
-import colors from 'vuetify/es5/util/colors';
-import { Configuration } from '@nuxt/types';
+import colors from 'vuetify/es5/util/colors'
+import { Configuration } from '@nuxt/types'
 
 const config: Configuration = {
   mode: 'universal',
@@ -12,11 +12,11 @@ const config: Configuration = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    ],
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
   /*
   ** Customize the progress-bar color
@@ -39,7 +39,7 @@ const config: Configuration = {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
-    '@nuxt/typescript-build',
+    '@nuxt/typescript-build'
   ],
   /*
   ** Nuxt.js modules
@@ -48,7 +48,7 @@ const config: Configuration = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Axios module configuration
@@ -72,10 +72,10 @@ const config: Configuration = {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
-        },
-      },
-    },
+          success: colors.green.accent3
+        }
+      }
+    }
   },
   /*
   ** Build configuration
@@ -84,13 +84,13 @@ const config: Configuration = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-    },
+    extend (config, ctx) {
+    }
   },
   typescript: {
     typeCheck: true,
-    ignoreNotFoundWarnings: true,
-  },
-};
+    ignoreNotFoundWarnings: true
+  }
+}
 
-export default config;
+export default config
